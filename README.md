@@ -39,12 +39,12 @@
 
 ## messagesテーブル
 
-| Column  | Type  | Options                      |
-|:-------:|:-----:|:----------------------------:|
-|body     |text   |                              |
-|image    |string |                              |
-|users_id |integer|null: false, foreign_key: true|
-|groups_id|integer|null: false, foreign_key: true|
+| Column  | Type     | Options                      |
+|:-------:|:--------:|:----------------------------:|
+|body     |text      |                              |
+|image    |string    |                              |
+|user     |references|null: false, foreign_key: true|
+|group    |references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
