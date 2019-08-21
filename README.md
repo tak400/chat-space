@@ -2,10 +2,10 @@
 
 ## usersテーブル
 
-| Column | Type  | Options   |
-|:------:|:-----:|:---------:|
-|name    |string |null: false, unique: true|
-|email   |string |null: false, unique: true|
+| Column | Type  | Options                              |
+|:------:|:-----:|:------------------------------------:|
+|name    |string |null: false, unique: true, index: true|
+|email   |string |null: false, unique: true             |
 
 ### Association
 - has_many :groups, through: members
