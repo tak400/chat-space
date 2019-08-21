@@ -39,9 +39,10 @@
 
 ## messagesテーブル
 
-| Column  | Type  | Options   |
-|:-------:|:-----:|:---------:|
-|body     |text   |null: false|
+| Column  | Type  | Options                      |
+|:-------:|:-----:|:----------------------------:|
+|body     |text   |                              |
+|image    |string |                              |
 |users_id |integer|null: false, foreign_key: true|
 |groups_id|integer|null: false, foreign_key: true|
 
