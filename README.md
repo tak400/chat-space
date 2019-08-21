@@ -27,10 +27,10 @@
 
 ## membersテーブル
 
-| Column  | Type  | Options                      |
-|:-------:|:-----:|:----------------------------:|
-|users_id |integer|null: false, foreign_key: true|
-|groups_id|integer|null: false, foreign_key: true|
+| Column  | Type     | Options                      |
+|:-------:|:--------:|:----------------------------:|
+|user     |references|null: false, foreign_key: true|
+|group    |references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
