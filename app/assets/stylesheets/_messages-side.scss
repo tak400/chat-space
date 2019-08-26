@@ -1,0 +1,41 @@
+.side{
+  width: 300px;
+  float: left;
+  height: 100vh;
+  &__header{
+    background-color: #253141;
+    height: 100px;
+    line-height: 100px;
+    padding: 0 20px;
+    &--user{
+      float: left;
+      color: $whiteColor;
+      font-weight: bold;
+      font-size: 16px;
+    }
+    &--new{
+      float: right;
+    }
+    &--account{
+      float: right;
+    }
+  }
+  &__body{
+    box-sizing: border-box;
+    background-color: #2f3e51;
+    height: calc(100% - 100px);
+    padding: 20px 20px 0;
+    &--group{
+      font-size: 15px;
+      font-weight: bold;
+      color: $whiteColor;
+      padding-bottom: 5px;
+    }
+    &--message{
+      font-size: 11px;
+      font-weight: bold;
+      color: $whiteColor;
+      padding-bottom: 40px;
+    }
+  }
+}
