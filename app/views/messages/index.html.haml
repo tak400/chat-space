@@ -1,1 +1,47 @@
-hello view
+.side
+  .side__header
+    .side__header--user
+      test-user
+    .side__header--account
+      = link_to('') do
+        = fa_icon 'cog'
+    .side__header--new
+      = link_to('') do
+        = fa_icon 'edit'
+
+  .side__body
+    .side__body--group
+      group-name
+    .side__body--message
+      top-message
+
+.main
+  .main__header
+    .main__header__left
+      .main__header__left--group
+        group-directory
+      .main__header__left--member
+        group-member
+    .main__header__right
+      .main__header__right--edit
+        = link_to "Edit"
+
+  .main__body
+    .main__body--user
+      user-name
+    .main__body--time
+      2019/mm/dd(XXX) hh:mm:ss
+    .main__body--message
+      test-message
+
+  .main__footer
+    .main__footer--form
+      %textarea{placeholder:"type a message"}
+    .main__footer--img
+      %form
+        %label
+          = fa_icon 'image'
+          %input{type: "file", class:"image"}
+      
+    .main__footer--send
+      Send

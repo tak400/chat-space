@@ -1,0 +1,94 @@
+.main{
+  width: calc(100vw - 300px);
+  height: 100vh;
+  float: right;
+  &__header{
+    box-sizing: border-box;
+    height: 100px;
+    padding: 0 40px;
+    border: solid 1px;
+    border-color: #eeeeee;
+    &__left{
+      float: left;
+      &--group{
+        font-size: 20px;
+        color: #333333;
+        padding-top: 35px;
+      }
+      &--member{
+        font-size: 12px;
+        color: $grayColor;
+        padding-top: 12px;
+      }
+    }
+    &__right{
+      float: right;
+      &--edit{
+      border: solid 1px ;
+      line-height: 40px;
+      margin-top: 28px;
+      padding: 0 20px;
+      color: $blueColor;
+      }
+    }
+  }
+  &__body{
+    box-sizing: border-box;
+    background-color: #fafafa;
+    height: calc(100vh - 100px - 100px);
+    padding: 46px 40px 0;
+    &--user{
+      display: inline-block;
+      font-size: 16px;
+      font-weight: bold;
+      padding-bottom: 10px;
+      color: $blackColor;
+    }
+    &--time{
+      display: inline-block;
+      font-size: 12px;
+      color: $grayColor;
+      padding-left: 10px;
+    }
+    &--message{
+      padding-bottom: 40px;
+      font-size: 14px;
+      color: $blackColor;
+    }
+  }
+  &__footer{
+    box-sizing: border-box;
+    background-color: #d6cfcf;
+    height: 100px;
+    padding: 25px 40px;
+    line-height: 100px;
+    &--form{
+      textarea{
+        padding: 0 10px;
+        color: $blackColor;
+        float: left;
+        width: calc(100% - 150px);
+        height: 50px;
+        line-height: 50px;
+        resize: none;
+      }
+    }
+    &--img{
+      line-height: 50px;
+      position: absolute;
+      left: calc(100% - 195px);
+      .image{
+        display:none;
+      }
+    }
+    &--send{
+      float: left;
+      background-color: $blueColor;
+      height: 50px;
+      line-height: 50px;
+      padding: 0 20px;
+      margin-left: 15px;
+      color: #eeeeee;
+    }
+  }
+}
