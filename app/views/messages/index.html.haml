@@ -11,9 +11,12 @@
 
   .side__body
     .side__body--group
-      group-name
-    .side__body--message
-      top-message
+      - current_user.groups.each do |group|
+        = link_to '#' do
+          .side__body--group__name
+            = group.name
+          .side__body--message
+            top-message
 
 .main
   .main__header
