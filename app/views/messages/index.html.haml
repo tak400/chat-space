@@ -22,20 +22,17 @@
   .main__header
     .main__header__left
       .main__header__left--group
-        group-directory
+        = @group.name
       .main__header__left--member
-        group-member
+        member:
+        - @group.users.each do |user|
+          = user.name
     .main__header__right
       .main__header__right--edit
-        = link_to "Edit"
+        = link_to "Edit", edit_group_path(@group)
 
   .main__body
-    .main__body--user
-      user-name
-    .main__body--time
-      2019/mm/dd(XXX) hh:mm:ss
-    .main__body--message
-      test-message
+    = render @messages
 
   .main__footer
     .main__footer--form
