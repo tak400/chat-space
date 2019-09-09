@@ -63,32 +63,40 @@
     padding: 25px 40px;
     line-height: 100px;
     &--form{
-      textarea{
-        padding: 0 10px;
-        color: $blackColor;
+      color: $blackColor;
+      line-height: 50px;
+      &__message{
         float: left;
-        width: calc(100% - 150px);
+        width: calc(100% - 160px);
         height: 50px;
-        line-height: 50px;
-        resize: none;
+        font-size: 16px;
+        padding-left: 10px;
+        border: none;
       }
-    }
-    &--img{
-      line-height: 50px;
-      position: absolute;
-      left: calc(100% - 195px);
-      .image{
-        display:none;
+      &--img{
+        float: left;
+        height: 50px;
+        &--icon{
+          float:left;
+          background-color: $whiteColor;
+          height: 50px;
+          line-height: 50px;
+          font-size: 20px;
+          padding-right: 10px;
+
+        }
+        .hidden{
+          display: none;
+        }
+        &__submit{
+          float: right;
+          background-color: $blueColor;
+          height: 50px;
+          padding: 0 30px;
+          margin-left: 15px;
+          color: $whiteColor;
+        }
       }
-    }
-    &--send{
-      float: right;
-      background-color: $blueColor;
-      height: 50px;
-      line-height: 50px;
-      padding: 0 35px;
-      margin-left: 15px;
-      color: #eeeeee;
     }
   }
 }

@@ -39,12 +39,10 @@
 
   .main__footer
     .main__footer--form
-      %textarea{placeholder:"type a message"}
-    .main__footer--img
-      %form
-        %label
-          = fa_icon 'image'
-          %input{type: "file", class:"image"}
-      
-    .main__footer--send
-      Send
+      = form_for [@group, @message] do |f|
+        = f.text_field :body, class: 'main__footer--form__message', placeholder: "type a message"
+        .main__footer--form--img
+          = f.label :image, class: 'main__footer--form--img--icon' do
+            = fa_icon 'image', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'main__footer--form--img__submit'
