@@ -31,9 +31,8 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.main__body').append(html)
-      $('.main__footer--form__message').val('')
-      $('.main__body').animate({scrollTop: $('.main__body')[0].scrollHeight});
       $('.new_message')[0].reset();
+      $('.main__body').animate({scrollTop: $('.main__body')[0].scrollHeight});
       $('.main__footer--form--img__submit').attr('disabled', false);
     })
     .fail(function(){
