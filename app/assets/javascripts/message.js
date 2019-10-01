@@ -8,7 +8,7 @@ $(function(){
                 <div class="main__body--time">
                   ${message.created_at}
                 </div>
-                <div class="main__body--message">
+                <div class="main__body--message" data-message-id="${message.id}">
                   <p class="main__body--message__body">
                     ${message.body}
                   </p>
@@ -40,4 +40,28 @@ $(function(){
       $('.main__footer--form--img__submit').attr('disabled', false);
     })
   });
+
+    var reloadMessages = function() {
+      if (window.location.href.match(/\/groups\/\d+\/messages/)) {
+        last_message_id = $('.main__body--message').last().data('message-id')
+        $.ajax({
+          url: "api/messages",
+          type: 'get',
+          dataType: 'json',
+          data: {id: last_message_id}
+        })
+        .done(function(messages){
+          var insertHTML = '';
+          messages.forEach(function(message){
+              insertHTML += buildHTML(message)
+              $('.main__body').append(insertHTML)
+              $('.main__body').animate({scrollTop: $('.main__body')[0].scrollHeight});
+          })
+        })
+        .fail(function() {
+          alert('更新に失敗しました');
+        });
+      }
+    };
+  setInterval(reloadMessages, 5000);
 });
