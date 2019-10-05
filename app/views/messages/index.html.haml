@@ -12,7 +12,7 @@
           = user.name
     .main__header__right
       .main__header__right--edit
-        = link_to "Edit", edit_group_path(@group)
+        = link_to "Edit", edit_group_path(@group), data: {"turbolinks" => false}
 
   .main__body
     = render @messages
