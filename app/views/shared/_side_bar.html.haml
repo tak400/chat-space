@@ -13,7 +13,7 @@
     .side__body--group
       - current_user.groups.each do |group|
         = link_to group_messages_path(group), data: {"turbolinks" => false} do
-          .side__body--group__name
+          .side__body--group__name{style: 'color: white;'}
             = group.name
           .side__body--message
             = group.show_last_message
